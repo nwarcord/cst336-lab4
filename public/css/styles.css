@@ -1,0 +1,58 @@
+:root {
+    background-color: rgb(16, 24, 41);
+}
+
+body {
+    max-width: 1366px;
+    background-color: transparent !important;
+    text-align: center;
+    color: white !important;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+h1 {
+    border-bottom: 1px solid white;
+    padding: 8px;
+}
+
+.navbar-custom {
+    background-color: rgb(138, 81, 125);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: white;
+}
+
+.navbar-custom .navbar-nav a {
+    color: rgba(255, 255, 255, .8);
+}
+
+.navbar-custom .navbar-nav a:hover {
+    background-color: rgba(16, 24, 41, .5);
+}
+
+.navbar-custom .navbar-nav a:active {
+    background-color: rgba(16, 24, 41, .8);
+}
+
+.list-group-item {
+    background-color: rgb(138, 81, 125) !important;
+    color: white;
+    border: 0 !important;
+}
+
+.panel-heading, .panel-footer, .panel-group .panel-default {
+    background-color: rgb(138, 81, 125) !important;
+    border: 0;
+    color: lightgrey !important;
+}
+
+.panel-group {
+    padding-top: 8px;
+}
