@@ -16,11 +16,13 @@
                 <span class="navbar-brand" href="#">The Solar System</span>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/#">Home</a></li>
-                <li><a href="/mercury">Mercury</a></li>
-                <li><a href="/venus">Venus</a></li>
-                <li><a href="/earth">Earth</a></li>
-                <li><a href="/mars">Mars</a></li>
+            <% pages.forEach(function(page) { %>
+                <% if (current === page["url"]) { %>
+                    <li><a class="active" href="<%- page["url"]%>"><%= page["name"] %></a></li>
+                <% } else { %>
+                    <li><a href="<%- page["url"]%>"><%= page["name"] %></a></li>
+                <% } %>
+            <% }); %>
             </ul>
         </div>
     </nav>

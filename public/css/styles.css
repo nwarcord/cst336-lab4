@@ -37,7 +37,7 @@ h1 {
     background-color: rgba(16, 24, 41, .5);
 }
 
-.navbar-custom .navbar-nav a:active {
+.navbar-custom .navbar-nav a:active, .active {
     background-color: rgba(16, 24, 41, .8);
 }
 
