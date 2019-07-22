@@ -3,16 +3,8 @@ const app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static("public"));
 
-var pages = [
-    {"url": "/", "name": "Home"},
-    {"url": "/mercury", "name": "Mercury"},
-    {"url": "/venus", "name": "Venus"},
-    {"url": "/earth", "name": "Earth"},
-    {"url": "/mars", "name": "Mars"}
-];
-
 app.get("/", function(req,res){
-    res.render("index.html", {pages: pages, current: "/"});
+    res.render("index.html");
 });
 
 app.get("/mercury", function(req, res){
@@ -21,7 +13,7 @@ app.get("/mercury", function(req, res){
         "Though it is the closest planet to the sun, it does not have the hottest surface temperature.",
         "It takes 88 Earth days for Mercury to complete an orbit around the Sun."
     ];
-    res.render("mercury.html", {facts: facts, pages: pages, current: "/mercury"});
+    res.render("mercury.html", {facts: facts});
 });
 
 app.get("/venus", function(req, res){
@@ -31,7 +23,7 @@ app.get("/venus", function(req, res){
         "Roughly 900 degrees Farenheit on the surface, the hottest in our Solar System.",
         "Other than our Moon, Venus is the brightest natural body in the night sky."
     ];
-    res.render("venus.html", {facts: facts, pages: pages, current: "/venus"});
+    res.render("venus.html", {facts: facts});
 });
 
 app.get("/earth", function(req, res){
@@ -41,7 +33,7 @@ app.get("/earth", function(req, res){
         "Earth's atmosphere is made up primarily of nitrogen (78%), oxygen(21%), and other miscellaneous substances.",
         "About 4.5 billion years old, the Earth is believed to have taken 10-20 million years to fully form."
     ];
-    res.render("earth.html", {facts: facts, pages: pages, current: "/earth"});
+    res.render("earth.html", {facts: facts});
 });
 
 app.get("/mars", function(req, res){
@@ -51,10 +43,14 @@ app.get("/mars", function(req, res){
         "There are traces of water on Mars, and the planet has seasons along with a thin atmosphere.",
         "The dust stroms on Mars are the largest in our Solar System, with some spanning the entire planet and producing winds that reach 100 mph."
     ];
-    res.render("mars.html", {facts: facts, pages: pages, current: "/mars"});
+    res.render("mars.html", {facts: facts});
 });
 
 // Server Listener
-app.listen("8081", "127.0.0.1", function(){
-    console.log("Express server is running...");
+// app.listen("8081", "127.0.0.1", function(){
+//     console.log("Express server is running...");
+// });
+
+app.listen(process.env.PORT, process.env.IP, function() {
+    console.log("Running Express Server...");
 });
