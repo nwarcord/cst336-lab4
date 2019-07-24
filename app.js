@@ -9,7 +9,7 @@ app.get("/", function(req,res){
 
 app.get("/mercury", function(req, res){
     var facts = [
-        "Mercury has no moons or rings. Its surface is rocky and cratered from what is thought to be have been a bombardment of comets and asteroids billions of years ago.",
+        "Mercury has no moons or rings. Its surface is rocky and cratered from what is thought to have been a bombardment of comets and asteroids billions of years ago.",
         "Though it is the closest planet to the sun, it does not have the hottest surface temperature.",
         "It takes 88 Earth days for Mercury to complete an orbit around the Sun."
     ];
@@ -47,7 +47,7 @@ app.get("/mars", function(req, res){
 });
 
 // Server Listener
-// app.listen("8081", "127.0.0.1", function(){
+// app.listen("8081", "127.0.0.1", function() {
 //     console.log("Express server is running...");
 // });
 

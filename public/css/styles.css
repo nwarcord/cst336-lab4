@@ -56,3 +56,12 @@ h1 {
 .panel-group {
     padding-top: 8px;
 }
+
+.intro-links a {
+    font-size: 32px;
+    color: rgb(199, 122, 181) !important;
+}
+
+.intro-content {
+    font-size: 16px;
+}
